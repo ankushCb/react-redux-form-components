@@ -2,3 +2,7 @@ language: node_js
 node_js:
   - "4"
 sudo: enabled
+jobs:
+  include:
+    - stage: unit tests
+      script: "mocha --compilers js:babel-register --require ./test/helpers.js --require ./test/dom.js --recursive"

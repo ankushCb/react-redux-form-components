@@ -1,8 +1,13 @@
 import React from 'react';
-import SignIn from './SimpleSignup/index.js';
+//import SignIn from './SimpleSignup/index.js';
 
 class App extends React.Component {
   state = {}
+
+  componentDidMount() {
+      console.log("working");
+  }
+
   componentDidCatch(err, errorInfo) {
     console.log('error found ', err);
   }
@@ -17,11 +22,13 @@ class App extends React.Component {
     }
     return (
       <div>
-        <SignIn
-          form="signIn"
-          validation
-          onSubmit={(values) => { console.log('values', values) }}
-        />
+      {
+        // <SignIn
+        //   form="signIn"
+        //   validation
+        //   onSubmit={(values) => { console.log('values', values) }}
+        // />
+      }
       </div>
     )
   }
